@@ -2,7 +2,8 @@ let apiQuotes = [];
 const loader = document.getElementById('loader')
 const quoteContainer = document.getElementById('quote-container')
 
-// Get quotes from API
+
+// Loading spinner functions
 
 const loading = () => {
     loader.hidden = false;
@@ -13,6 +14,8 @@ const complete = () => {
     quoteContainer.hidden = false;
     loader.hidden = true;
 }
+
+// Get quotes from API
 
 async function getQuotes() {
     loading();
@@ -28,6 +31,8 @@ async function getQuotes() {
 }
 // On load
 getQuotes();
+
+// On click event
 
 document.getElementById('new-quote').addEventListener('click', () => {
     getQuotes();
