@@ -16,7 +16,7 @@ const complete = () => {
 
 async function getQuotes() {
     loading();
-    const apiUrl = 'http://fucking-great-advice.ru/api/random';
+    const apiUrl = 'https://fucking-great-advice.ru/api/random';
     try {
         const response = await fetch(apiUrl);
         apiQuotes = await response.json()
